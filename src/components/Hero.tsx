@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeftIcon, PlayIcon } from '@heroicons/react/24/outline';
-
+import img from '../../pablic/images/אניבשחור.jpg'
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -111,13 +111,32 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
+            {/* <div className="relative w-full">
+ <img
+                src="../../pablic/images/בשירות.jpg"
+                alt="פיתוח אתרים מקצועי"
+                className="w-full h-auto rounded-3xl shadow-2xl"
+              />
+  <div className="absolute inset-0 flex items-center justify-center">
+    <p className="text-white text-2xl font-bold bg-black/50 px-4 py-2 rounded-lg">
+      פיתוח אתרים מקצועי
+    </p>
+  </div>
+</div> */}
+
             <div className="relative z-10">
               <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="../../pablic/images/בשירות.jpg"
                 alt="פיתוח אתרים מקצועי"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto rounded-3xl shadow-2xl"
               />
-              
+
+              <div className="absolute inset-20   flex items-end justify-items-start">
+    <p className="text-white text-1xl font-bold bg-black/50 px-4 py-2 rounded-lg">
+     אני בהצגת מוצר טכנולוגי במהלך השירות
+    </p>
+  </div>
+             
               {/* Floating cards */}
               {/* <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

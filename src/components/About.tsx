@@ -87,7 +87,7 @@ const About = () => {
             {" "}
               <span className="bg-gradient-to-l from-primary-600 to-accent-500 bg-clip-text text-transparent">
                 
-DigitalPro
+UpSites-Digital
               </span>{' '}
            
             </motion.h2>

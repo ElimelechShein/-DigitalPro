@@ -9,7 +9,7 @@ import {
   CheckCircleIcon,
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
-
+import emailjs from "emailjs-com";
 interface FormData {
   name: string;
   email: string;
@@ -39,24 +39,57 @@ const Contact = () => {
   const whatsappNumber = '972547648848'; // Replace with your actual number
   const whatsappMessage = 'שלום! אני מעוניין לקבל מידע על פיתוח אתר';
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
+  // const onSubmit = async (data: FormData) => {
+  //   setIsSubmitting(true);
     
-    try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
+  //   try {
+  //     // Simulate API call - replace with actual endpoint
+  //     await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Here you would typically send data to your backend
-      console.log('Form data:', data);
+  //     // Here you would typically send data to your backend
+  //     console.log('Form data:', data);
       
-      setSubmitStatus('success');
-      reset();
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     setSubmitStatus('success');
+  //     reset();
+  //   } catch (error) {
+  //     setSubmitStatus('error');
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+
+   // 👈 תתקין עם: npm install emailjs-com
+
+const onSubmit = async (data: FormData) => {
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+        "service_1vne0l4"   // מזהה השירות  "YOUR_SERVICE_ID"
+     ,
+        "template_5urrvko" // מזהה התבנית "YOUR_TEMPLATE_ID" 
+      ,
+      {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        subject: data.subject,
+        message: data.message,
+        privacy: data.privacy ? "מאושר" : "לא מאושר"
+      },
+       "SvWAaJTqqrv6Le2ZK"    // המפתח הציבורי שלך "YOUR_PUBLIC_KEY"
+    );
+
+    setSubmitStatus("success");
+    reset();
+  } catch (error) {
+    console.error("שגיאה בשליחת המייל:", error);
+    setSubmitStatus("error");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const openWhatsApp = () => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;

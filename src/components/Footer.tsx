@@ -67,9 +67,9 @@ const Footer = () => {
           <div className="text-right">
             <div className="flex items-center justify-end mb-6">
               <div className="flex items-center">
-                <span className="text-2xl font-bold">DigitalPro</span>
+                <span className="text-2xl font-bold">UpSites-Digital</span>
                 <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center ml-3">
-                  <span className="text-white font-bold text-xl">D</span>
+                  <span className="text-white font-bold text-xl">U</span>
                 </div>
               </div>
             </div>
@@ -183,7 +183,7 @@ const Footer = () => {
               </button>
             </div>
             <div className="text-gray-400 text-sm order-1 md:order-2">
-              © {currentYear} DigitalPro. כל הזכויות שמורות.
+              © {currentYear} UpSites-Digital. כל הזכויות שמורות.
             </div>
           </div>
         </div>

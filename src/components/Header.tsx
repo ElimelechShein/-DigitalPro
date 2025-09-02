@@ -26,8 +26,8 @@ const Header = () => {
     { name: 'בית', href: 'hero' },
     { name: 'אודות', href: 'about' },
     { name: 'שירותים', href: 'services' },
-    { name: 'פרויקטים', href: 'portfolio' },
-    { name: 'לקוחות', href: 'testimonials' },
+    // { name: 'פרויקטים', href: 'portfolio' },
+    // { name: 'לקוחות', href: 'testimonials' },
     { name: 'יצירת קשר', href: 'contact' },
   ];
 
@@ -52,9 +52,9 @@ const Header = () => {
           >
             <div className="flex items-center">
               <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
+                <span className="text-white font-bold text-xl">U</span>
               </div>
-              <span className="mr-3 text-xl font-bold text-gray-900">DigitalPro</span>
+              <span className="mr-3 text-xl font-bold text-gray-900">UpSites-Digital</span>
             </div>
           </motion.div>
 
