@@ -126,7 +126,7 @@ const Hero = () => {
 
             <div className="relative z-10">
               <img
-                src="../../pablic/images/בשירות.jpg"
+                src="images/בשירות.jpg"
                 alt="פיתוח אתרים מקצועי"
                 className="w-full h-auto rounded-3xl shadow-2xl"
               />
