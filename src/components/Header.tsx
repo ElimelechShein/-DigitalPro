@@ -36,7 +36,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 max-w-full ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100'
           : 'bg-transparent'
@@ -91,6 +91,7 @@ const Header = () => {
               {isMenuOpen ? (
                 <XMarkIcon className="h-6 w-6" />
               ) : (
+                // <></>
                 <Bars3Icon className="h-6 w-6" />
               )}
             </button>

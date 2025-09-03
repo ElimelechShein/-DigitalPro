@@ -11,9 +11,10 @@ import WhatsAppButton from './components/WhatsAppButton';
 import './style.css'
 function App() {
   return (
-    <div className="min-h-screen bg-white  w-screen">
+    <div className="min-h-screen bg-white ">
+       <main>
       <Header />
-      <main>
+      
         <Hero />
         <About />
         <Services />
@@ -21,8 +22,9 @@ function App() {
         {/* <Testimonials /> */}
         <Contact />
 
-      </main>
+     
       <Footer />
+      </main>
       {/* <WhatsAppButton /> */}
     </div>
   );
