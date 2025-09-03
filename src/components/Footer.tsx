@@ -60,7 +60,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white max-w-full" dir='ltr'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -125,7 +125,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="text-right">
+          <div className="text-right" >
             <h3 className="text-lg font-semibold mb-6">פרטי התקשרות</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-end gap-3">

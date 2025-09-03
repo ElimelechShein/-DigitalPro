@@ -113,7 +113,7 @@ const onSubmit = async (data: FormData) => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-16" dir='ltr'>
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
