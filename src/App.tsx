@@ -20,9 +20,10 @@ function App() {
         {/* <Portfolio /> */}
         {/* <Testimonials /> */}
         <Contact />
+         <WhatsAppButton />
       </main>
       <Footer />
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
     </div>
   );
 }
