@@ -131,11 +131,26 @@ const Hero = () => {
                 className="w-full h-auto rounded-3xl shadow-2xl"
               />
 
-              <div className="absolute inset-20   flex items-end justify-items-start">
+              {/* <div className="absolute inset-20   flex items-end justify-items-start">
     <p className="text-white text-1xl font-bold bg-black/50 px-4 py-2 rounded-lg">
      אני בהצגת מוצר טכנולוגי במהלך השירות
     </p>
-  </div>
+  </div> */}
+
+  <div className="absolute inset-20 flex items-end justify-start">
+  <p className="
+    text-white 
+    text-sm sm:text-base md:text-xl   /* טקסט קטן בטלפון, גדל במסכים גדולים יותר */
+    font-bold 
+    bg-black/50 
+    px-2 sm:px-3 md:px-4   /* רווח פנימי קטן יותר בטלפון */
+    py-1 sm:py-2 md:py-2   /* ריווח אנכי קטן בטלפון */
+    rounded-md sm:rounded-lg  /* מסגרת מעוגלת קטנה בטלפון וגדולה יותר בדסקטופ */
+  ">
+    אני בהצגת מוצר טכנולוגי במהלך השירות
+  </p>
+</div>
+
              
               {/* Floating cards */}
               {/* <motion.div

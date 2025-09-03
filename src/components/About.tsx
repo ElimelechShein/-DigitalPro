@@ -82,12 +82,12 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+              className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 text-center"
             >
             {" "}
               <span className="bg-gradient-to-l from-primary-600 to-accent-500 bg-clip-text text-transparent">
                 
-UpSites-Digital
+DigitEli
               </span>{' '}
            
             </motion.h2>

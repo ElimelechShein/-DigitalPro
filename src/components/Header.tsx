@@ -52,9 +52,9 @@ const Header = () => {
           >
             <div className="flex items-center">
               <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">U</span>
+                <span className="text-white font-bold text-xl">D</span>
               </div>
-              <span className="mr-3 text-xl font-bold text-gray-900">UpSites-Digital</span>
+              <span className="mr-3 text-xl font-bold text-gray-900">DigitEli</span>
             </div>
           </motion.div>
 

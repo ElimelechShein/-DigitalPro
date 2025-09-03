@@ -9,12 +9,14 @@ const WhatsAppButton = () => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(url, '_blank');
   };
-
+const isMobile = window.innerWidth < 768;
   return (
     <motion.button
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
+       transition={{ duration: isMobile ? 0.3 : 0.5, delay: isMobile ? 0 : 1 }}
+ 
+      // transition={{ duration: 0.5, delay: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={openWhatsApp}
@@ -30,8 +32,13 @@ const WhatsAppButton = () => {
       </svg>
       
       {/* Pulse animation */}
-      <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20 group-hover:animate-none"></div>
-      
+      {/* <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20 group-hover:animate-none"></div>
+       */}
+
+       <div className={`absolute inset-0 rounded-full bg-green-500 ${
+  isMobile ? "" : "animate-ping"
+} opacity-20 group-hover:animate-none`}></div>
+
       {/* Tooltip */}
       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
         שוחח איתנו בוואטסאפ
