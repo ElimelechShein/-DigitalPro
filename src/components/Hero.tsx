@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeftIcon, PlayIcon } from '@heroicons/react/24/outline';
 import img from '../../pablic/images/אניבשחור.jpg'
+import { useInView } from '../hooks/useInView';
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -16,9 +17,9 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+ const [ref, inView] = useInView({ threshold: 0.1 });
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section id="hero"  ref={ref} className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
 
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -29,11 +30,18 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-right"
+              initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+
+            // initial={{ opacity: 0, x: 50 }}
+            // animate={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 0.8 }}
+            // className="text-right"
           >
+
+            
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
