@@ -145,18 +145,19 @@ const Hero = () => {
     </p>
   </div> */}
 
-  <div className="absolute inset-20 flex items-end  justify-start ">
+  <div className="absolute bottom-0  flex items-end  justify-start p-3">
   <p className="
-    text-white 
-    text-sm sm:text-base md:text-xl   /* טקסט קטן בטלפון, גדל במסכים גדולים יותר */
-    font-bold 
-    bg-black/50 
-    px-2 sm:px-3 md:px-4    /* רווח פנימי קטן יותר בטלפון */
-    py-1 sm:py-2 md:py-2   /* ריווח אנכי קטן בטלפון */
-    rounded-md sm:rounded-lg  /* מסגרת מעוגלת קטנה בטלפון וגדולה יותר בדסקטופ */
-  ">
-    אני בהצגת מוצר טכנולוגי במהלך השירות
-  </p>
+    text-white 
+    text-[12px] md:text-xl  /* גודל 12px בטלפון, ו-xl במסכים גדולים */
+    md:font-bold 
+    bg-black/50 
+    px-2 sm:px-6 md:px-4 
+    py-1 sm:py-1 md:py-1 
+    rounded-md sm:rounded-lg
+">
+    אני בהצגת מוצר טכנולוגי במהלך השירות
+  </p>
+  
 </div>
 
              
