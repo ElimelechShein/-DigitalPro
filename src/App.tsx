@@ -11,22 +11,16 @@ import WhatsAppButton from './components/WhatsAppButton';
 import './style.css'
 function App() {
   return (
-    <div className=" bg-white">
+    <div className=" bg-white w-screen overflow-x-hidden  ">
         <Header />
-      
-     
-    
         <Hero />
         <About />
         <Services />
         {/* <Portfolio /> */}
         {/* <Testimonials /> */}
         <Contact />
-
-     
-      <Footer />
-      
-      {/* <WhatsAppButton /> */}
+        <Footer /> 
+        {/* <WhatsAppButton /> */}
     </div>
   );
 }

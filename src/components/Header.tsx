@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <motion.header
     
-      className={`Headerstiky   w-full z-50 ${
+      className={`Headerstiky fixed top-0 full-screen  w-full z-50 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100'
           : 'bg-transparent'
