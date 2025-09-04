@@ -44,7 +44,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            מי אנחנו?
+            הסיפור שלי
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">אני מפתח אתרים בוגר יחידה טכנולוגית בצה"ל, עם תשוקה גדולה לחדשנות וליצירת פתרונות דיגיטליים. את הידע והניסיון שרכשתי אני מביא לעולם העסקי, כדי לעזור לעסקים קטנים ובינוניים להקים נוכחות אונליין שמביאה תוצאות.</p>
         </motion.div>
