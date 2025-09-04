@@ -147,7 +147,7 @@ const Hero = () => {
 
   <div className="absolute bottom-0  flex items-end  justify-start p-3">
   <p className="
-    text-white 
+   text-white 
     text-[12px] md:text-xl  /* גודל 12px בטלפון, ו-xl במסכים גדולים */
     md:font-bold 
     bg-black/50 

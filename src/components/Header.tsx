@@ -14,13 +14,30 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string) => { 
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+      
     }
+   setTimeout(() =>{
+      setIsMenuOpen(false)
+    } , 500)
   };
+
+    const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+   
+    }
+    setTimeout(() =>{
+      setIsMenuOpen(false)
+    } , 500)
+  };
+
+
+  
 
   const navigation = [
     { name: 'בית', href: 'hero' },
@@ -84,6 +101,7 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+ 
             onClick={() => scrollToSection('contact')}
             className="hidden md:inline-flex bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
@@ -119,9 +137,13 @@ const Header = () => {
       >
         <div className="px-4 py-4 space-y-2">
           {navigation.map((item) => (
+
+            
             <button
               key={item.name}
-              onClick={() => scrollToSection(item.href)}
+
+              onClick={() => {   scrollToSection(item.href)  } }
+             
               className="block w-full text-right text-gray-700 hover:text-primary-600 px-3 py-2 text-base font-medium transition-colors duration-200"
             >
               {item.name}
@@ -130,11 +152,13 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('contact')}
+                      
+            onClick={scrollToContact}
             className="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-full text-base font-medium hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl mt-4"
           >
             קבל הצעת מחיר
           </motion.button>
+           
         </div>
       </motion.div>
     </motion.header>
